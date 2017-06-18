@@ -1,11 +1,11 @@
 # Basic
-title: GcsSloop
-subtitle: Just do IT later.
-welcome_message: 欢迎来到我的魔法世界! 
+title: 皮皮虾
+subtitle: pipxia
+welcome_message: 皮皮虾，我们走吧！ 
 description: 嗨，我是 GcsSloop，一名来自2.5次元的魔法师，Android自定义View系列文章作者，非著名程序员。
-creator: <a href="http://www.GcsSloop.com">@GcsSloop</a>
+creator: <a href="http://www.pipxia.com">@pipxia</a>
 
-url: "http://www.gcssloop.com"
+url: "http://www.pipxia.com"
 
 permalink: /:categories/:title
 
@@ -23,7 +23,7 @@ blog_button:
     description: 访问博客
 
 nav:
-    - {title: GitHub,     in_site: false,  description: GcsSloop's GitHub,    url: 'https://github.com/GcsSloop'}
+    - {title: GitHub,     in_site: false,  description: GcsSloop's GitHub,    url: 'https://github.com/wangxin1248'}
     - {title: 目录,        in_site: true,  description: 博客目录,               url: '/timeline'}
     - {title: 关于,        in_site: true,  description: 关于作者 GcsSloop,       url: '/info/about'}
     
@@ -40,7 +40,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: GcsSloop
+    disqus: wangxin1248
     # duoshuo:
 # Social
 social:
@@ -48,10 +48,10 @@ social:
     github: GcsSloop
     twitter: GcsSloop
     rss: /feed.xml
-    mail: GcsSloop@gmail.com
+    mail: wangxin1248@gmail.com
     copyright: http://choosealicense.online
 
 # Google Analytics
 ga:
-    id: UA-82493667-1
-    host: www.gcssloop.com
+    id: UA-101239613-1
+    host: www.pipxia.com
