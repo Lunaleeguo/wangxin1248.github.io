@@ -23,6 +23,7 @@ blog_button:
     description: 访问博客
 
 nav:
+    - {title: 简历, description: 我的简历, url: ''}
     - {title: GitHub,     in_site: false,  description: pipxia's GitHub,    url: 'https://github.com/wangxin1248'}
     - {title: 目录,        in_site: true,  description: 博客目录,               url: '/timeline'}
     - {title: 关于,        in_site: true,  description: 关于作者 pipxia,       url: '/info/about'}
@@ -40,7 +41,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: wangxin1248
+    disqus: pipxia
     # duoshuo:
 # Social
 social:
