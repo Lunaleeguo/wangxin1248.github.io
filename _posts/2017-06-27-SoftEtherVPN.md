@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Info
+category: posts
 title: 搭建IPV6 VPN 实现教育网免费上网
 tags: VPN,科学上网,SoftEtherVPN,IPV6
 keywords: SoftEtherVPN,VPN,翻墙,免费上网
