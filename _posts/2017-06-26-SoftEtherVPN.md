@@ -203,19 +203,19 @@ Host Name填服务器的地址或域名，端口如果之前改过了在这也�
 ## 连接VPN
 ### WINDOWS连接
 首先到**网络和共享中心**里新建一个网络连接:
-![intent](/assets/images/2017-06/intent.png)
+![intent](/assets/images/2017-06/intent.PNG)
 选择连接到工作区 。
-![vpn](/assets/images/2017-06/vpn.png)
+![vpn](/assets/images/2017-06/vpn.PNG)
 连接VPN
-![host](/assets/images/2017-06/host.png)
+![host](/assets/images/2017-06/host.PNG)
 然后在地址栏里填上服务器地址或域名（**这里填写对应VPS的IPV6地址**）。配置完成后打开**更改适配器设置**：
-![info](/assets/images/2017-06/info.png)
+![info](/assets/images/2017-06/info.PNG)
 打开VPN的属性
-![security](/assets/images/2017-06/security.png)
+![security](/assets/images/2017-06/security.PNG)
 在**安全**选项卡里将**VPN类型**改为**L2TP**，然后点高级设置：
-![key](/assets/images/2017-06/key.png)
+![key](/assets/images/2017-06/key.PNG)
 在里面选上使用预共享密钥并把之前设置的密钥填进去。
-![vpnconnect](/assets/images/2017-06/vpnconnect.png)
+![vpnconnect](/assets/images/2017-06/vpnconnect.PNG)
 之后在VPN连接里填入服务器地址，用户名和密码填进去就可以连上了。
 
 Windows10自带的VPN支持IPV6，只要按照上面的方面将域名改为IPV6的地址就可以使用IPV6流量，实测教育网可以通过该方法免流量上网。
