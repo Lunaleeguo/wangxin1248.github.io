@@ -33,19 +33,26 @@ redirect_from:
 
 以上为截止发布本文时的最新版本，建议从[SoftEther]()官方网站获取最新版本。
 
+
+
 ### 安装启动
+
 解压下载的文件
     
     tar -zxvf softether-vpnserver-*.tar.gz
+
 将解压的文件移动到**/usr/local**下
 
     mv vpnserver /usr/local
+
 进入解压目录
 
     cd /usr/local/vpnserver
+
 启动安装脚本
     
     ./.install.sh
+
 
 > SoftEther VPN Server (Ver 4.22, Build 9630, Intel x64 / AMD64) for Linux Install Utility
 Copyright (c) SoftEther Project at University of Tsukuba, Japan. All Rights Reserved.
@@ -57,6 +64,7 @@ Copyright (c) SoftEther Project at University of Tsukuba, Japan. All Rights Rese
 > 2.No
 > 
 > Please choose one of above number:
+
 
 这里询问你是否阅读License，输入1
 
@@ -71,6 +79,7 @@ Copyright (c) SoftEther Project at University of Tsukuba, Japan. All Rights Rese
 > 
 > Please choose one of above number:
 
+
 询问你是否读懂了，输入1
 
 
@@ -82,25 +91,36 @@ Copyright (c) SoftEther Project at University of Tsukuba, Japan. All Rights Rese
 > 
 > Please choose one of above number:
 
+
 问你同不同意，继续输入1
+
 
 接下来便会开始安装，假如遇到gcc命令无法识别，使用
 
     yum install gcc
+
 命令安装，接下来重新执行安装命令。
 
 如果没有异常则说明安装成功，执行
 
     ./vpnserver start
+
 启动服务
 
     ./vpnserver stop
+
 停止服务。
+
+
+
+
 ### 服务器端配置
+
 启动成功后我们需要设置远程登录密码以便本地管理服务。
 运行
 
     ./vpncmd
+
 进入VPN的命令行：
 
 
@@ -124,7 +144,9 @@ Copyright (c) SoftEther VPN Project. All Rights Reserved.
 >
 > Select 1, 2 or 3:
 
+
 这里我们选择1，然后出现：
+
 
 > Specify the host name or IP address of the computer that the destination VPN Server or VPN Bridge is operating on.
 >
@@ -135,7 +157,10 @@ Copyright (c) SoftEther VPN Project. All Rights Reserved.
 >
 > Hostname of IP Address of Destination:
 
+
 这里需要选择地址和端口。由于这台VPS已经搭建了一个网站，用了SSL占用了443端口，所以默认的443端口是用不了了，所以一定要改。我改用了5555端口，所以在这里输入localhost:5555，然后出现：
+
+
 > If connecting to the server by Virtual Hub Admin Mode, please input the Virtual Hub name.
 If connecting by server admin mode, please press Enter without inputting anything.
 Specify Virtual Hub Name:
@@ -147,13 +172,20 @@ Specify Virtual Hub Name:
 >
 > VPN Server>
 
+
 这时我们需要输入
 
     ServerPasswordSet
+
 命令设置远程管理密码
 
+
 输入设定的密码，确认密码后就可以通过Windows版的SoftEther VPN Server Manager远程管理了。
+
+
 ## VPN管理
+
+
 首先下载并安装[SoftEther VPN Server Manager](http://softether-download.com/en.aspx "SoftEther VPN Server Manager")，其实只用到了管理工具：
 
 ![vpnsetup](/assets/images/2017-06/vpnsetup.png)
