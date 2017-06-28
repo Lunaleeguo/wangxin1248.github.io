@@ -207,47 +207,76 @@ Host Name填服务器的地址或域名，端口如果之前改过了在这也�
 然后会弹出一个动态DNS功能的窗口，由于不能确定它给的域名是不是被墙了，我们就不去用它，把这个窗口关了就行了。
 
 之后会有一个协议设置的窗口：
+
 ![vpnl2tp](/assets/images/2017-06/vpnl2tp.png)
+
 
 这里把启用**L2TP**挑上钩，下面设置一个**IPsec预共享密钥**就行了。
 
 之后又会弹出一个**VPN Azure Cloud**服务的窗口，感觉没什么用，禁用了就行了。即使有用以后也可以再启用。
 
 接下来要新建用户：
+
 ![vpnuser](/assets/images/2017-06/vpnuser.png)
+
 其中用户名是必填的，验证类型选密码验证就行，然后在右侧设置用户密码
 
 之后回到管理界面，点管理虚拟HUB：
+
 ![vpnmanager](/assets/images/2017-06/vpnmanager.png)
+
 ![vpnhub](/assets/images/2017-06/vpnhub.png)
+
 这里也可以继续添加新用户。点**虚拟NAT和虚拟DHCP服务器**，弹出窗口：
+
 ![vpnvirtual](/assets/images/2017-06/vpnvirtual.png)
+
 在里面启用**SecureNAT**并点**SecureNAT**配置：
+
 ![vpnnat](/assets/images/2017-06/vpnnat.png)
+
 注意DNS要改为**8.8.8.8**和**8.8.4.4**。
 
 这里就算配置完毕。然后顺便生成一下**OpenVPN**的配置文件，点**OpenVPN / MS-SSTP Setting**：
+
 ![vpnopen](/assets/images/2017-06/vpnopen.png)
+
 然后点击新窗口中部的按钮生成配置文件：
+
 ![vpnovpn](/assets/images/2017-06/vpnovpn.png)
+
 打开导出的压缩包会看到里面有两个**.ovpn**文件，一般我们要用到***_openvpn_remote_access_l3.ovpn**这个文件，因为我们是通过IPv4地址管理的VPN，所以这个配置文件里的**remote**一项会是IPv4地址，如果需要使用IPv6的VPN就将其替换为相应的IPv6地址即可。
 
 ## 连接VPN
 ### WINDOWS连接
 首先到**网络和共享中心**里新建一个网络连接:
+
 ![intent](/assets/images/2017-06/intent.PNG)
+
 选择连接到工作区 。
+
 ![vpn](/assets/images/2017-06/vpn.PNG)
+
 连接VPN
+
 ![host](/assets/images/2017-06/host.PNG)
+
 然后在地址栏里填上服务器地址或域名（**这里填写对应VPS的IPV6地址**）。配置完成后打开**更改适配器设置**：
+
 ![info](/assets/images/2017-06/info.PNG)
+
 打开VPN的属性
+
 ![security](/assets/images/2017-06/security.PNG)
+
 在**安全**选项卡里将**VPN类型**改为**L2TP**，然后点高级设置：
+
 ![key](/assets/images/2017-06/key.PNG)
+
 在里面选上使用预共享密钥并把之前设置的密钥填进去。
+
 ![vpnconnect](/assets/images/2017-06/vpnconnect.PNG)
+
 之后在VPN连接里填入服务器地址，用户名和密码填进去就可以连上了。
 
 Windows10自带的VPN支持IPV6，只要按照上面的方面将域名改为IPV6的地址就可以使用IPV6流量，实测教育网可以通过该方法免流量上网。
